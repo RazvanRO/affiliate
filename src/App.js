@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet"; // For dynamic head content
 import "./App.css";
 
 function App() {
@@ -24,6 +25,16 @@ function App() {
 
   return (
     <div className="app">
+      {/* Helmet for SEO - dynamic meta tags */}
+      <Helmet>
+        <title>WealthyGambler - Giveaways & Referral Codes</title>
+        <meta
+          name="description"
+          content="WealthyGambler offers exciting giveaways and the best referral codes for Hypedrop, Gamdom, Rollbit, Clash.gg, Packdraw, and more!"
+        />
+        <link rel="canonical" href="https://RazvanRO.github.io/sample-app-" />
+      </Helmet>
+
       {/* Header Section */}
       <header className="hero-section">
         <h1>Welcome to WealthyGambler</h1>
@@ -31,47 +42,57 @@ function App() {
       </header>
 
       {/* Cards Section */}
-      <div className="cards-container">
+      <section className="cards-container">
         {/* Card 1 */}
         <div className="card" onClick={() => handleClick("https://hypedrop.com/r/THEWEALTHYGAMBLER")}>
-          <img src={`${process.env.PUBLIC_URL}/hypedrop.png`} alt="Hypedrop" />
+          <img src={`${process.env.PUBLIC_URL}/hypedrop.png`} alt="Hypedrop referral code" />
           <h3>Hypedrop</h3>
           <p>Code: THEWEALTHYGAMBLER</p>
-          <a href="https://hypedrop.com/r/THEWEALTHYGAMBLER" target="_blank" rel="noopener noreferrer">Visit Hypedrop</a>
+          <a href="https://hypedrop.com/r/THEWEALTHYGAMBLER" target="_blank" rel="noopener noreferrer">
+            Visit Hypedrop
+          </a>
         </div>
 
         {/* Card 2 */}
         <div className="card" onClick={() => handleClick("https://gamdom.com/r/wealthygambler")}>
-          <img src={`${process.env.PUBLIC_URL}/og_gamdom.jpg`} alt="Gamdom" />
+          <img src={`${process.env.PUBLIC_URL}/og_gamdom.jpg`} alt="Gamdom referral code" />
           <h3>Gamdom</h3>
           <p>Code: wealthygambler</p>
-          <a href="https://gamdom.com/r/wealthygambler" target="_blank" rel="noopener noreferrer">Visit Gamdom</a>
+          <a href="https://gamdom.com/r/wealthygambler" target="_blank" rel="noopener noreferrer">
+            Visit Gamdom
+          </a>
         </div>
 
         {/* Card 3 */}
         <div className="card" onClick={() => handleClick("https://rollbit.com/referral/TheWealthyGambler")}>
-          <img src={`${process.env.PUBLIC_URL}/rollbit-1-scaled.jpg`} alt="Rollbit" />
+          <img src={`${process.env.PUBLIC_URL}/rollbit.jpg`} alt="Rollbit referral code" />
           <h3>Rollbit</h3>
           <p>Code: TheWealthyGambler</p>
-          <a href="https://rollbit.com/referral/TheWealthyGambler" target="_blank" rel="noopener noreferrer">Visit Rollbit</a>
+          <a href="https://rollbit.com/referral/TheWealthyGambler" target="_blank" rel="noopener noreferrer">
+            Visit Rollbit
+          </a>
         </div>
 
         {/* Card 4 for Clash.gg */}
         <div className="card" onClick={() => handleClick("https://clash.gg/r/RAZMAN")}>
-          <img src={`${process.env.PUBLIC_URL}/clash.png`} alt="Clash.gg" />
+          <img src={`${process.env.PUBLIC_URL}/clash.png`} alt="Clash.gg referral code" />
           <h3>Clash.gg</h3>
           <p>Code: RAZMAN</p>
-          <a href="https://clash.gg/r/RAZMAN" target="_blank" rel="noopener noreferrer">Visit Clash.gg</a>
+          <a href="https://clash.gg/r/RAZMAN" target="_blank" rel="noopener noreferrer">
+            Visit Clash.gg
+          </a>
         </div>
 
         {/* Card 5 for Packdraw */}
         <div className="card" onClick={() => handleClick("https://packdraw.com?ref=RCB")}>
-          <img src={`${process.env.PUBLIC_URL}/packdraw.png`} alt="Packdraw" />
+          <img src={`${process.env.PUBLIC_URL}/packdraw.png`} alt="Packdraw referral code" />
           <h3>Packdraw</h3>
           <p>Code: RCB</p>
-          <a href="https://packdraw.com?ref=RCB" target="_blank" rel="noopener noreferrer">Visit Packdraw</a>
+          <a href="https://packdraw.com?ref=RCB" target="_blank" rel="noopener noreferrer">
+            Visit Packdraw
+          </a>
         </div>
-      </div>
+      </section>
 
       {/* Form Section */}
       <section className="form-section">
